@@ -1,4 +1,4 @@
-<p-tabMenu [model]="items">
+<p-tabMenu [model]="itemsMenu">
     <ng-template pTemplate="item" let-item>
         <a (click)="cambiarCategoria(item.label)" class="p-menuitem-link">
             {{ item.label }}
@@ -8,37 +8,38 @@
 
   <ng-container [ngSwitch]="activeItem">
     <div *ngSwitchCase="'Tirador'">
-      <div *ngFor="let item of items">
+      <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)"> 
         <h3>{{ item.nombre }}</h3>
         <p>Precio: {{ item.precio }}</p>
       </div>
     </div>
+    
     <div *ngSwitchCase="'Mago'">
-      <div *ngFor="let item of items">
+      <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
         <h3>{{ item.nombre }}</h3>
         <p>Precio: {{ item.precio }}</p>
       </div>
     </div>
     <div *ngSwitchCase="'Luchador'">
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
           <h3>{{ item.nombre }}</h3>
           <p>Precio: {{ item.precio }}</p>
         </div>
       </div>
       <div *ngSwitchCase="'Asesino'">
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
           <h3>{{ item.nombre }}</h3>
           <p>Precio: {{ item.precio }}</p>
         </div>
       </div>
       <div *ngSwitchCase="'Soporte'">
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
           <h3>{{ item.nombre }}</h3>
           <p>Precio: {{ item.precio }}</p>
         </div>
       </div>
       <div *ngSwitchCase="'Tanque'">
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
           <h3>{{ item.nombre }}</h3>
           <p>Precio: {{ item.precio }}</p>
         </div>

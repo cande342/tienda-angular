@@ -1,12 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ItemsServicesService } from '../../../services/items-services.service';
+import { Item } from '../../../services/items-services.service';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-bag',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './bag.component.html',
-  styleUrl: './bag.component.css'
+  styleUrl: './bag.component.css',
+  
 })
-export class BagComponent {
+export class BagComponent implements OnInit {
 
+  itemsEnBolsa: Item[] = [];
+  
+  constructor(
+    private itemsService: ItemsServicesService,
+
+  ) { }
+
+  ngOnInit() {
+    // Suscribirse a la lista de items en la bolsa
+    this.itemsService.itemsEnBolsa$.subscribe(items => {
+      this.itemsEnBolsa = items;
+    });
+  }
+
+  calcularTotal(): number {
+    return this.itemsEnBolsa.reduce((total, item) => total + item.precio, 0);
+  }
+  
+  
+quitarItem(item: Item) {
+  this.itemsService.eliminarItem(item);
+}
+vaciarBolsa() {
+  this.itemsEnBolsa = []; // Vacía el array local
+  this.itemsService.vaciarBolsa(); // Llama al método del servicio para actualizar el BehaviorSubject
+}
 }

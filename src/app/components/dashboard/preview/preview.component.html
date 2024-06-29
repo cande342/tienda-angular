@@ -1,1 +1,12 @@
-<p>preview works!</p>
+<div *ngIf="itemSeleccionado">
+    <h2>{{ itemSeleccionado.nombre }}</h2>
+    <p>Precio: {{ itemSeleccionado.precio }}</p>
+    <p>Descripción: {{ itemSeleccionado.descripcion }}</p>
+    <p>Aporte: {{ itemSeleccionado.aporte }}</p>
+
+    <button (click)="agregarABolsa(itemSeleccionado)">Agregar a la Bolsa</button>
+  </div>
+  <div *ngIf="!itemSeleccionado">
+    <p>Selecciona un item para ver su información.</p>
+  </div>
+  

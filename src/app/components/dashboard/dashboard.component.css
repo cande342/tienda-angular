@@ -5,25 +5,25 @@
     color: white; /* Color del texto para que sea visible */
 }
 
-h1 {
-    font-family: 'Cinzel', 'Uncial Antiqua', serif;
-    text-align: center;
-    color: #C49B2C; /* Color dorado similar a LoL */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para dar efecto de profundidad */
-}
 
-.dashboard-container {
+  .dashboard-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: auto;
+    height: 100vh;
   }
   
   app-items {
-    width: 45%; 
+    width: 45%;
+    height: 80vh; /* Alto del 100% del contenedor */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
   }
   
   app-preview {
     width: 45%;
+    height: 80vh; /* Alto del 100% del contenedor */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
   }
   

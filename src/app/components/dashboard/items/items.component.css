@@ -10,3 +10,16 @@ app-items .p-tabmenu {
 app-items .p-menuitem-link{
     border-radius: 0%;
 }
+
+app-items .p-menuitem{
+  padding: 0%;
+  margin: 0%;
+}
+
+:host {
+  padding: 0%;
+  background-color: #362f4e; 
+  color: #ffffff; 
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

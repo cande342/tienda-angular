@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { TabMenuModule } from 'primeng/tabmenu';
-import { ItemsServicesService } from '../../../services/items-services.service'; // Importa el servicio
+import { ItemsServicesService } from '../../../services/items-services.service'; 
 import { Item } from '../../../services/items-services.service';
 
 @Component({
@@ -28,6 +28,7 @@ export class ItemsComponent {
           { label: 'Soporte' },
           { label: 'Tanque' },
       ];   
+      this.activeItem = 'Tirador'; 
       if (this.activeItem) { 
         this.obtenerItems(this.activeItem);
       }
@@ -43,6 +44,11 @@ export class ItemsComponent {
           this.items = items; 
         });
     }
+
+    seleccionarItem(itemName: string) {
+      this.itemsService.seleccionarItem(itemName);
+    }
+    
   }
 
 

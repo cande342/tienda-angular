@@ -1,1 +1,15 @@
-<p>bag works!</p>
+<div *ngIf="itemsEnBolsa.length > 0; else bolsaVacia">
+    <h2>Bolsa</h2>
+    <ul>
+      <li *ngFor="let item of itemsEnBolsa">
+        {{ item.nombre }} - ${{ item.precio }}
+        <button (click)="quitarItem(item)">Quitar</button> 
+      </li>
+    </ul>
+    <p>Total: ${{ calcularTotal() }}</p>
+    <button (click)="vaciarBolsa()">Vaciar Bolsa</button>
+    <button>Comprar</button>
+  </div>
+  <ng-template #bolsaVacia>
+    <p>La bolsa está vacía.</p>
+  </ng-template>
