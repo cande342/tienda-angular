@@ -1,0 +1,141 @@
+[
+    {
+      "categoria": "Tirador",
+      "items": [
+        {
+          "nombre": "Filo del Infinito",
+          "precio": 3400,
+          "descripcion": "Una espada legendaria que incrementa el daño crítico.",
+          "aporte": "+80 Daño de Ataque, +25% Probabilidad de Golpe Crítico"
+        },
+        {
+          "nombre": "Verdugo de Kraken",
+          "precio": 3400,
+          "descripcion": "Un arma poderosa que inflige daño verdadero adicional.",
+          "aporte": "+65 Daño de Ataque, +25% Velocidad de Ataque"
+        },
+        {
+          "nombre": "Huracán de Runaan",
+          "precio": 2600,
+          "descripcion": "Permite que los ataques disparen rayos adicionales a enemigos cercanos.",
+          "aporte": "+45% Velocidad de Ataque, +20% Probabilidad de Golpe Crítico"
+        }
+      ]
+    },
+    {
+      "categoria": "Mago",
+      "items": [
+        {
+          "nombre": "Sombras Gemelas",
+          "precio": 2500,
+          "descripcion": "Invoca fantasmas para buscar enemigos cercanos.",
+          "aporte": "+70 Poder de Habilidad, +10% Velocidad de Movimiento"
+        },
+        {
+          "nombre": "Cetro de Cristal de Rylai",
+          "precio": 2600,
+          "descripcion": "Los hechizos ralentizan a los enemigos.",
+          "aporte": "+90 Poder de Habilidad, +350 Vida"
+        },
+        {
+          "nombre": "Reloj de Arena de Zhonya",
+          "precio": 2900,
+          "descripcion": "Permite al usuario volverse invulnerable y no seleccionable durante 2.5 segundos.",
+          "aporte": "+65 Poder de Habilidad, +45 Armadura"
+        }
+      ]
+    },
+    {
+      "categoria": "Tanque",
+      "items": [
+        {
+          "nombre": "Malla de Espinas",
+          "precio": 2700,
+          "descripcion": "Devuelve una porción del daño recibido a los atacantes.",
+          "aporte": "+250 Vida, +80 Armadura"
+        },
+        {
+          "nombre": "Corazón de Acero",
+          "precio": 3200,
+          "descripcion": "Aumenta la vida máxima y la regeneración de vida.",
+          "aporte": "+800 Vida, +200% Regeneración de Vida Base"
+        },
+        {
+          "nombre": "Peto de Guardia de Ánima",
+          "precio": 3000,
+          "descripcion": "Absorbe el daño mágico recibido y lo convierte en vida.",
+          "aporte": "+55 Armadura, +300 Vida, +10% Reducción de Enfriamiento"
+        }
+      ]
+    },
+    {
+      "categoria": "Asesino",
+      "items": [
+        {
+          "nombre": "Draktharr, Cuchilla Oscura",
+          "precio": 3200,
+          "descripcion": "Otorga invisibilidad después de un asesinato.",
+          "aporte": "+60 Daño de Ataque, +20 Letalidad"
+        },
+        {
+          "nombre": "Filoscuro de Draktharr",
+          "precio": 3200,
+          "descripcion": "Inflige daño adicional a enemigos con poca vida.",
+          "aporte": "+55 Daño de Ataque, +18 Letalidad"
+        },
+        {
+          "nombre": "Danza de la Muerte",
+          "precio": 3100,
+          "descripcion": "Una parte del daño recibido se convierte en daño a lo largo del tiempo.",
+          "aporte": "+55 Daño de Ataque, +15% Omnivampirismo"
+        }
+      ]
+    },
+    {
+      "categoria": "Luchador",
+      "items": [
+        {
+          "nombre": "Hoja del Rey Arruinado",
+          "precio": 3200,
+          "descripcion": "Roba velocidad de movimiento y aplica daño adicional basado en la vida del enemigo.",
+          "aporte": "+40 Daño de Ataque, +25% Velocidad de Ataque, +12% Omnivampirismo"
+        },
+        {
+          "nombre": "Baile de la Muerte",
+          "precio": 3100,
+          "descripcion": "Convierta parte del daño recibido en daño prolongado.",
+          "aporte": "+55 Daño de Ataque, +45 Armadura, +15% Omnivampirismo"
+        },
+        {
+          "nombre": "Hidra Voraz",
+          "precio": 3300,
+          "descripcion": "Otorga daño en área en ataques básicos.",
+          "aporte": "+65 Daño de Ataque, +20% Omnivampirismo"
+        }
+      ]
+    },
+    {
+      "categoria": "Soporte",
+      "items": [
+        {
+          "nombre": "Redención",
+          "precio": 2300,
+          "descripcion": "Cura a los aliados en una gran área.",
+          "aporte": "+200 Vida, +20% Regeneración de Vida, +10% Reducción de Enfriamiento"
+        },
+        {
+          "nombre": "Medallón de los Solari de Hierro",
+          "precio": 2500,
+          "descripcion": "Otorga un escudo a los aliados cercanos.",
+          "aporte": "+30 Armadura, +30 Resistencia Mágica"
+        },
+        {
+          "nombre": "Cruz Solar",
+          "precio": 2700,
+          "descripcion": "Aumenta la resistencia de los aliados cercanos.",
+          "aporte": "+350 Vida, +50 Resistencia Mágica, +10% Reducción de Enfriamiento"
+        }
+      ]
+    }
+  ]
+  

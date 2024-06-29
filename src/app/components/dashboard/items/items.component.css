@@ -1,0 +1,12 @@
+css
+/* Estilos más específicos para sobrescribir el tema */
+app-items .p-tabmenu {
+    border-radius: 0 !important; 
+    box-shadow: none;
+    padding: 0%;
+    
+  }
+
+app-items .p-menuitem-link{
+    border-radius: 0%;
+}
