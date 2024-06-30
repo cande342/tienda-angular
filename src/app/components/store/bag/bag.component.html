@@ -1,15 +1,28 @@
-<div *ngIf="itemsEnBolsa.length > 0; else bolsaVacia">
+<div class="host">
+  <div class="items-column">
     <h2>Bolsa</h2>
-    <ul>
-      <li *ngFor="let item of itemsEnBolsa">
-        {{ item.nombre }} - ${{ item.precio }}
-        <button (click)="quitarItem(item)">Quitar</button> 
-      </li>
-    </ul>
-    <p>Total: ${{ calcularTotal() }}</p>
-    <button (click)="vaciarBolsa()">Vaciar Bolsa</button>
-    <button>Comprar</button>
+    <div class="items-container">
+      <div *ngIf="itemsEnBolsa.length === 0" class="empty-bag-message">
+        <p>La bolsa está vacía.</p>
+      </div>
+      <div class="item" *ngFor="let item of itemsEnBolsa">
+        <img [src]="item.imagen" [alt]="item.nombre">
+        <p class="item-name">{{ item.nombre }}</p>
+        <p class="item-price">${{ item.precio }}</p>
+        <button (click)="quitarItem(item)">Quitar</button>
+      </div>
+    </div>
   </div>
-  <ng-template #bolsaVacia>
-    <p>La bolsa está vacía.</p>
-  </ng-template>
+
+  <div class="summary-column">
+    <h2>Resumen</h2>
+    <div class="total">Total: ${{ calcularTotal() }}</div>
+    <div class="buttons-container">
+      <button class="comprar">Comprar</button>
+    </div>
+
+    <div class="buttons-container">
+      <button class="vaciar" (click)="vaciarBolsa()">Vaciar Bolsa</button>
+    </div>
+  </div>
+</div>

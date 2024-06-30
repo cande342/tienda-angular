@@ -7,43 +7,56 @@
   </p-tabMenu>
 
   <ng-container [ngSwitch]="activeItem">
-    <div *ngSwitchCase="'Tirador'">
-      <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)"> 
+    <div *ngSwitchCase="'Tirador'" class="items-container">
+      <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)" class="item"> 
+        <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
         <h3>{{ item.nombre }}</h3>
-        <p>Precio: {{ item.precio }}</p>
+        <p>{{ item.precio | currency:'USD':'symbol':'1.0-0' }}</p>
       </div>
     </div>
-    
-    <div *ngSwitchCase="'Mago'">
-      <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
+
+    <div *ngSwitchCase="'Mago'" class="items-container">
+      <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)" class="item">
+        <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
         <h3>{{ item.nombre }}</h3>
-        <p>Precio: {{ item.precio }}</p>
+        <p>{{ item.precio | currency:'USD':'symbol':'1.0-0' }}</p>
       </div>
     </div>
-    <div *ngSwitchCase="'Luchador'">
-        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
+      
+    <div *ngSwitchCase="'Luchador'" class="items-container">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)" class="item">
+          <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
           <h3>{{ item.nombre }}</h3>
-          <p>Precio: {{ item.precio }}</p>
+          <p>{{ item.precio | currency:'USD':'symbol':'1.0-0' }}</p>
         </div>
-      </div>
-      <div *ngSwitchCase="'Asesino'">
-        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
+    </div>
+      
+    <div *ngSwitchCase="'Asesino'" class="items-container">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)" class="item">
+          <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
           <h3>{{ item.nombre }}</h3>
-          <p>Precio: {{ item.precio }}</p>
+          <p>{{ item.precio | currency:'USD':'symbol':'1.0-0' }}</p>
         </div>
-      </div>
-      <div *ngSwitchCase="'Soporte'">
-        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
+    </div>
+      
+    <div *ngSwitchCase="'Soporte'" class="items-container">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)" class="item">
+          <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
           <h3>{{ item.nombre }}</h3>
-          <p>Precio: {{ item.precio }}</p>
+          <p>{{ item.precio | currency:'USD':'symbol':'1.0-0' }}</p>
         </div>
-      </div>
-      <div *ngSwitchCase="'Tanque'">
-        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)">
+    </div>
+      
+    <div *ngSwitchCase="'Tanque'" class="items-container">
+        <div *ngFor="let item of items" (click)="seleccionarItem(item.nombre)" class="item">
+          <img src="{{ item.imagen }}" alt="{{ item.nombre }}">
           <h3>{{ item.nombre }}</h3>
-          <p>Precio: {{ item.precio }}</p>
+          <p>{{ item.precio | currency:'USD':'symbol':'1.0-0' }}</p>
         </div>
-      </div>
-  </ng-container>
+    </div>
+
+    </ng-container>
+
+  
 
   

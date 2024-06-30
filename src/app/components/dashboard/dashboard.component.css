@@ -14,14 +14,14 @@
   }
   
   app-items {
-    width: 45%;
+    width: 50%;
     height: 80vh; /* Alto del 100% del contenedor */
     overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
     padding: 10px; /* Ajusta el relleno según sea necesario */
   }
   
   app-preview {
-    width: 45%;
+    width: 50%;
     height: 80vh; /* Alto del 100% del contenedor */
     overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
     padding: 10px; /* Ajusta el relleno según sea necesario */

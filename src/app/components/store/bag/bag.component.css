@@ -1,0 +1,102 @@
+.host {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b1b1b;
+    border: 2px solid var(--surface-border);
+    padding: 20px;
+    max-width: 1000px;
+    color: #ffffff;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .items-column {
+    width: 60%;
+  }
+  
+  .summary-column {
+    width: 35%;
+  }
+  
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .item {
+    background-color: #1f1f1f;
+    border: 2px solid var(--surface-border);
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
+  
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .item p {
+    font-size: 12px;
+    margin: 3px 0;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    color:#d4af37;
+  }
+  
+  .item-price {
+    font-weight: bold;
+    color: var(--surface-300);
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .buttons-container button {
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons-container button.comprar {
+    margin: auto;
+    background-color: #1a73e8; 
+    margin-bottom: 20px;
+  }
+
+  .total{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .buttons-container button.vaciar {
+    background-color: #ea4335; 
+    align-self: flex-end;
+    margin-top: 75%;
+  }
+  
+  .buttons-container button:hover {
+    opacity: 0.8; /* Opacidad al pasar el mouse */
+  }
+  
+  .empty-bag-message {
+    margin: auto;
+  }
+  

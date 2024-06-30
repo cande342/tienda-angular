@@ -4,22 +4,88 @@ app-items .p-tabmenu {
     border-radius: 0 !important; 
     box-shadow: none;
     padding: 0%;
-    
   }
 
 app-items .p-menuitem-link{
     border-radius: 0%;
+    background-color: #1b1b1b;
+    transition: background-color 0.3s ease; 
+    margin: 0px, 0px, -1px;
+    
 }
 
+
+app-items .p-tabmenu .p-menuitem-link:hover {
+  background-color: #2c2c2c; /* Cambio de color al pasar el mouse */
+}
 app-items .p-menuitem{
   padding: 0%;
   margin: 0%;
+  background-color: #1b1b1b;
 }
 
 :host {
-  padding: 0%;
-  background-color: #362f4e; 
-  color: #ffffff; 
-  padding: 20px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #1b1b1b; /* Color de fondo oscuro */
+  border: 2px solid var(--surface-border);
+  padding: 20px; /* Ajusta según sea necesario */
+  max-width: 600px;
+  color: #ffffff; /* Color de texto blanco */
+  display: block; 
+}
+
+.items-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cambia de 3 a 4 columnas */
+  gap: 20px;
+}
+
+.item {
+  background-color: var(--surface-card); /* Fondo oscuro */
+  border: 2px solid var(--surface-border);
+  border-radius: 10px;
+  padding: 15px; /* Ajusta el padding para que los items sean más pequeños */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+.item img {
+  width: 80px; /* Reducir el tamaño de la imagen */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px; /* Ajustar el margen inferior de la imagen */
+}
+
+.item h3 {
+  font-size: 14px; /* Reducir el tamaño del título */
+  margin: 8px 0; /* Ajustar el margen del título */
+  color: #d4af37; /* Color dorado */
+}
+
+.item p {
+  font-size: 14px; /* Reducir el tamaño del texto */
+  margin: 8px 0; /* Ajustar el margen del texto */
+}
+
+.item p.price {
+  font-weight: bold;
+}
+
+.item button {
+  background-color: #d4af37; /* Color dorado */
+  color: #1b1b1b; /* Color de texto oscuro */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px; /* Reducir el padding del botón */
+  font-size: 14px; /* Reducir el tamaño del texto del botón */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+  background-color: #b8860b; /* Oscurecer dorado al pasar el mouse */
 }

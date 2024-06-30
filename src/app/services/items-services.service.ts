@@ -7,6 +7,7 @@ export interface Item {
   precio: number;
   descripcion: string;
   aporte: string;
+  imagen: string;
 }
 
 export interface Categoria {
@@ -21,13 +22,14 @@ export interface Categoria {
 
 export class ItemsServicesService {
 
+  //Items
   private itemSeleccionadoSubject = new BehaviorSubject<string | null>(null);
   itemSeleccionado$ = this.itemSeleccionadoSubject.asObservable();
 
-    // Bolsa
-    private itemsEnBolsa: Item[] = [];
-    private itemsEnBolsaSubject = new BehaviorSubject<Item[]>(this.itemsEnBolsa);
-    itemsEnBolsa$ = this.itemsEnBolsaSubject.asObservable();
+  // Bolsa
+  private itemsEnBolsa: Item[] = [];
+  private itemsEnBolsaSubject = new BehaviorSubject<Item[]>(this.itemsEnBolsa);
+  itemsEnBolsa$ = this.itemsEnBolsaSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -57,7 +59,7 @@ export class ItemsServicesService {
     //Métodos para el componente BOLSA
 
   agregarItem(item: Item) {
-    if (this.itemsEnBolsa.length < 7) {
+    if (this.itemsEnBolsa.length < 6) {
       this.itemsEnBolsa.push(item);
       this.itemsEnBolsaSubject.next(this.itemsEnBolsa);
     } else {

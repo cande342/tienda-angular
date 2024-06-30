@@ -1,12 +1,11 @@
-<div *ngIf="itemSeleccionado">
-    <h2>{{ itemSeleccionado.nombre }}</h2>
-    <p>Precio: {{ itemSeleccionado.precio }}</p>
-    <p>Descripción: {{ itemSeleccionado.descripcion }}</p>
-    <p>Aporte: {{ itemSeleccionado.aporte }}</p>
+<div *ngIf="itemSeleccionado" class="selected-item-container">
+  <h2>{{ itemSeleccionado.nombre }}</h2>
+  <img src="{{ itemSeleccionado.imagen }}" alt="{{ itemSeleccionado.nombre }}">
+  <p class="description">{{ itemSeleccionado.descripcion }}</p>
+  <p>{{ itemSeleccionado.aporte }}</p>
 
-    <button (click)="agregarABolsa(itemSeleccionado)">Agregar a la Bolsa</button>
-  </div>
-  <div *ngIf="!itemSeleccionado">
-    <p>Selecciona un item para ver su información.</p>
-  </div>
-  
+  <button (click)="agregarABolsa(itemSeleccionado)">Agregar a la Bolsa</button>
+</div>
+<div *ngIf="!itemSeleccionado">
+  <p>Selecciona un item para ver su información.</p>
+</div>
