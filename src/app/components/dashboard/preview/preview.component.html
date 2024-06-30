@@ -6,6 +6,6 @@
 
   <button (click)="agregarABolsa(itemSeleccionado)">Agregar a la Bolsa</button>
 </div>
-<div *ngIf="!itemSeleccionado">
+<div *ngIf="!itemSeleccionado" class="empty-message">
   <p>Selecciona un item para ver su información.</p>
 </div>

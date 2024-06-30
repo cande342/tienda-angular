@@ -22,7 +22,6 @@ export class BagComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // Suscribirse a la lista de items en la bolsa
     this.itemsService.itemsEnBolsa$.subscribe(items => {
       this.itemsEnBolsa = items;
     });
@@ -37,7 +36,7 @@ quitarItem(item: Item) {
   this.itemsService.eliminarItem(item);
 }
 vaciarBolsa() {
-  this.itemsEnBolsa = []; // Vacía el array local
-  this.itemsService.vaciarBolsa(); // Llama al método del servicio para actualizar el BehaviorSubject
+  this.itemsEnBolsa = []; 
+  this.itemsService.vaciarBolsa(); 
 }
 }

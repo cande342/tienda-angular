@@ -76,8 +76,8 @@ export class ItemsServicesService {
   }
   
   vaciarBolsa() {
-    this.itemsEnBolsa = []; // Vacía el array de items en la bolsa
-    this.itemsEnBolsaSubject.next(this.itemsEnBolsa); // Emite la lista vacía a través del BehaviorSubject
+    this.itemsEnBolsa = []; 
+    this.itemsEnBolsaSubject.next(this.itemsEnBolsa); 
   }
   
 }

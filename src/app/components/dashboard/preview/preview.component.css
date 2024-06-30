@@ -1,32 +1,37 @@
 :host {
-  background-color: #1b1b1b; /* Color de fondo oscuro */
+  background-color: #1b1b1b; 
   border: 0px, 2px, 2px, 2px solid var(--surface-border);
-  padding: 0%; /* Ajusta según sea necesario */
+  padding: 0%; 
   max-width: 600px;
-  color: #ffffff; /* Color de texto blanco */
+  color: #ffffff; 
   display: block; 
 }
 
+.empty-message{
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}
 .selected-item-container {
   padding: 20px;
   border-radius: 10px;
-  position: relative; /* Para posicionar el botón */
+  position: relative; 
 }
 
 .selected-item-container h2 {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-  color: #d4af37; /* Color dorado */
+  color: #d4af37; 
 }
 
 .selected-item-container img {
   display: block;
   max-width: 100%;
-  max-height: 250px; /* Ajusta este valor según tus necesidades */
+  max-height: 250px; 
   height: auto;
   border-radius: 10px;
-  margin: 0 auto 20px auto; /* Centrar la imagen y añadir margen inferior */
+  margin: 0 auto 20px auto; 
 }
 
 .selected-item-container p {
@@ -40,25 +45,25 @@
 
 .selected-item-container .price {
   text-align: left;
-  margin-bottom: 60px; /* Añadir espacio para el botón */
+  margin-bottom: 60px; 
 }
 
 .selected-item-container button {
-  background-color: #d4af37; /* Color dorado */
-  color: #1b1b1b; /* Color de texto oscuro */
+  background-color: #d4af37; 
+  color: #1b1b1b; 
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 18px;
-  margin-top: 20px; /* Añadir espacio entre el botón y el texto */
+  margin-top: 20px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
   width: auto;
   margin-left: auto;
-  margin-right: 0; /* Alinea el botón a la derecha */
+  margin-right: 0; 
 }
 
 .selected-item-container button:hover {
-  background-color: #b8860b; /* Oscurecer dorado al pasar el mouse */
+  background-color: #b8860b; 
 }

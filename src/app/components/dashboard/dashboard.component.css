@@ -1,29 +1,31 @@
+
 .content {
-    position: relative;
+    height: 100vh;
     z-index: 2;
     padding: 20px;
-    color: white; /* Color del texto para que sea visible */
+    color: white; 
+    overflow: hidden;
 }
 
 
   .dashboard-container {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin-bottom: 0%;
     height: 100vh;
   }
   
   app-items {
     width: 50%;
-    height: 80vh; /* Alto del 100% del contenedor */
-    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
-    padding: 10px; /* Ajusta el relleno según sea necesario */
+    height: 80vh; 
+    overflow-y: auto; 
+    padding: 10px; 
   }
   
   app-preview {
     width: 50%;
-    height: 80vh; /* Alto del 100% del contenedor */
-    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
-    padding: 10px; /* Ajusta el relleno según sea necesario */
+    height: 80vh; 
+    overflow-y: auto;
+    padding: 10px; 
   }
   

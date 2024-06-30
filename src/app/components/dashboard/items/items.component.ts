@@ -33,11 +33,12 @@ export class ItemsComponent {
         this.obtenerItems(this.activeItem);
       }
     }
+    
     cambiarCategoria(nuevaCategoria: string) {
       this.activeItem = nuevaCategoria;
       this.obtenerItems(nuevaCategoria);
     }
-    // Método para obtener los items de una categoría
+
     obtenerItems(categoria: string) {
       this.itemsService.obtenerItemsPorCategoria(categoria)
         .subscribe(items => {
