@@ -14,7 +14,8 @@ import { CommonModule } from '@angular/common';
   
 })
 export class BagComponent implements OnInit {
-
+  
+  mostrarBoton: boolean = true; 
   itemsEnBolsa: Item[] = [];
 
   

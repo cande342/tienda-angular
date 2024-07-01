@@ -18,8 +18,10 @@
     <h2>Resumen</h2>
     <div class="total">Total: ${{ calcularTotal() }}</div>
     <div class="buttons-container">
-      <button class="comprar">Comprar</button>
+      <button *ngIf="mostrarBoton" class="comprar" (click)="mostrarBoton = false">Comprar</button>
+      <p *ngIf="!mostrarBoton">¡Buena suerte allá fuera!</p>
     </div>
+    
 
     <div class="buttons-container">
       <button class="vaciar" (click)="vaciarBolsa()">Vaciar Bolsa</button>
