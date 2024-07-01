@@ -8,6 +8,7 @@ export interface Item {
   descripcion: string;
   aporte: string;
   imagen: string;
+  agregado: boolean;
 }
 
 export interface Categoria {
@@ -51,20 +52,30 @@ export class ItemsServicesService {
     return this.http.get<Categoria[]>('data/arsenal.json')
       .pipe(
         map(categorias => {
-          return categorias.flatMap(c => c.items).find(item => item.nombre === nombre) || null;
+          const itemEncontrado = categorias.flatMap(c => c.items).find(item => item.nombre === nombre);
+          if (itemEncontrado) {
+            return { ...itemEncontrado, agregado: false }; 
+          } else {
+            return null;
+          }
         })
       );
   }
 
-    //Métodos para el componente BOLSA
+  //Métodos para el componente BOLSA
 
   agregarItem(item: Item) {
     if (this.itemsEnBolsa.length < 6) {
       this.itemsEnBolsa.push(item);
       this.itemsEnBolsaSubject.next(this.itemsEnBolsa);
+      item.agregado=true;
     } else {
-      console.error('La bolsa está llena (máximo 7 items).');
+      console.error('La bolsa está llena (máximo 6 items).');
     }
+  }
+
+  estaBolsaLlena(): boolean {
+    return this.itemsEnBolsa.length >= 6; 
   }
 
   eliminarItem(item: Item) {

@@ -1,10 +1,14 @@
-<div *ngIf="itemSeleccionado" class="selected-item-container">
+<div *ngIf="itemSeleccionado && !(bolsaLlena$ | async)" class="selected-item-container">
   <h2>{{ itemSeleccionado.nombre }}</h2>
   <img src="{{ itemSeleccionado.imagen }}" alt="{{ itemSeleccionado.nombre }}">
   <p class="description">{{ itemSeleccionado.descripcion }}</p>
   <p>{{ itemSeleccionado.aporte }}</p>
-
-  <button (click)="agregarABolsa(itemSeleccionado)">Agregar a la Bolsa</button>
+  <button (click)="agregarABolsa(itemSeleccionado)" [disabled]="itemSeleccionado.agregado">
+    {{ itemSeleccionado.agregado ? '¡Se agregó!' : 'Agregar a la Bolsa' }}
+  </button>
+</div>
+<div *ngIf="itemSeleccionado && (bolsaLlena$ | async)" class="selected-item-container">
+  <p>La bolsa está llena, no puedes agregar más items.</p>
 </div>
 <div *ngIf="!itemSeleccionado" class="empty-message">
   <p>Selecciona un item para ver su información.</p>

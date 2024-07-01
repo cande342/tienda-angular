@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemsServicesService } from '../../../services/items-services.service';
-import { Item } from '../../../services/items-services.service';
+import { ItemsServicesService } from '../../services/items-services.service';
+import { Item } from '../../services/items-services.service';
 import { CommonModule } from '@angular/common';
+
 
 
 @Component({
@@ -15,6 +16,7 @@ import { CommonModule } from '@angular/common';
 export class BagComponent implements OnInit {
 
   itemsEnBolsa: Item[] = [];
+
   
   constructor(
     private itemsService: ItemsServicesService,
